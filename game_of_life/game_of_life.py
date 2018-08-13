@@ -30,20 +30,19 @@ def if_alive(i, j, new_position):
         #print(sum_)
         new_position[i][j] = 0
         #print("if alive  ", new_position)
-        return new_position[i][j]
+        return new_position
     elif sum_==2 or sum_==3:
         new_position[i][j] = 1
-        return new_position[i][j]
+        return new_position
 
 def if_dead(i, j, new_position):    
     sum_ = sum_of(i,j, new_position)
     if sum_ == 3:
         new_position[i][j] = 1
-        return new_position[i][j]
+        return new_position
     else:
         new_position[i][j] = 0
-        return new_position[i][j]
-
+        return new_position
 def main():
     first_position = initial_position()
     current_position = initial_position()
