@@ -22,3 +22,10 @@ def initial_position():
     return pos
 
     
+def sum_of(i,j):
+    current_position = initial_position()
+    total = 0
+    #return current_position[i][j]
+    total = current_position[i-1][j-1] + current_position[i-1][j] + current_position[i-1][j+1] + current_position[i][j-1] +  current_position[i][j+1] + current_position[i+1][j-1] + current_position[i+1][j] + current_position[i+1][j+1]
+    return total
+

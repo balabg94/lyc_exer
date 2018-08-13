@@ -1,4 +1,5 @@
 [
   "test_GoL.py::test_return",
-  "test_GoL.py::test_cell_position"
+  "test_GoL.py::test_cell_position",
+  "test_GoL.py::test_sum_of_neighbors"
 ]
