@@ -3,5 +3,7 @@
   "test_GoL.py::test_cell_position",
   "test_GoL.py::test_sum_of_neighbors",
   "test_GoL.py::test_if_alive",
-  "test_GoL.py::test_if_alive_sides"
+  "test_GoL.py::test_if_alive_sides",
+  "test_GoL.py::test_if_alive_left_mid",
+  "test_GoL.py::test_if_alive_right_mid"
 ]

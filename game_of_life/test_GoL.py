@@ -30,3 +30,14 @@ def test_if_alive():
 
 def test_if_alive_sides():
     assert game_of_life.if_alive(3,3) == 0
+
+def test_if_alive_left_mid():
+    assert game_of_life.if_alive(2,0) == 1
+
+def test_if_alive_right_mid():
+    assert game_of_life.if_alive(2,3) == 0
+
+
+def test_if_dead():
+    assert game_of_life.if_dead(2,1) == 1
+
