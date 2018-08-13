@@ -38,3 +38,11 @@ def if_alive(i, j):
     else:
         return 1
 
+def if_dead(i, j):
+    current_position = initial_position()    
+    sum_ = sum_of(i,j)
+    if sum_ == 3:
+        return 1
+    else:
+        return 0
+

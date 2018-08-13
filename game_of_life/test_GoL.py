@@ -39,5 +39,5 @@ def test_if_alive_right_mid():
 
 
 def test_if_dead():
-    assert game_of_life.if_dead(2,1) == 1
+    assert game_of_life.if_dead(2,0) == 1
 
