@@ -21,10 +21,9 @@ def test_cell_position():
 
 
 def test_sum_of_neighbors():
-    position = [[0, 0, 0, 0],
-                [0, 1, 0, 0],
-                [0, 1, 1, 1],
-                [0, 1, 0, 0]]
 
     assert game_of_life.sum_of(2, 1) == 2
     
+
+def test_if_alive():
+    assert game_of_life.if_alive(2,1) == 1
