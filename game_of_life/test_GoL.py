@@ -17,4 +17,4 @@ def test_cell_position():
                          ['+', '1', '+', '+'],
                          ['+', '1', '+', '+']]
     
-    assert game_of_life.initial_position() == initial_position
+    assert game_of_life.initial_position() == initial_positions
