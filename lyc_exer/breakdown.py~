@@ -1,0 +1,15 @@
+def breakdown(n):
+    out = {}
+    count_2000 = 0
+    count_500 = 0
+    count_200 = 0
+    count_100 = 0
+    count_50  = 0
+    count_1 = 0
+    while n:
+        if n%2000 == 0:
+            count_2000 += 1
+            n -= 2000
+            print n
+            continue
+        

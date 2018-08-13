@@ -1,0 +1,6 @@
+def abbreviate(s):
+    for i in s:
+        if i.isupper():
+            print('yes')
+        else:
+            continue()

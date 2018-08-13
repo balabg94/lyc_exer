@@ -1,0 +1,5 @@
+def palindrome(s):
+    rev = []
+    for i in range(-1, len(s)):
+        rev.append(i)
+    print(rev)

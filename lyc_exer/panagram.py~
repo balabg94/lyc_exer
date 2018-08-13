@@ -1,0 +1,3 @@
+def panagram(s):
+    for i in ['a-z']:
+        print i
