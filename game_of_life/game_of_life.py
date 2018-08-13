@@ -29,3 +29,11 @@ def sum_of(i,j):
     total = current_position[i-1][j-1] + current_position[i-1][j] + current_position[i-1][j+1] + current_position[i][j-1] +  current_position[i][j+1] + current_position[i+1][j-1] + current_position[i+1][j] + current_position[i+1][j+1]
     return total
 
+def if_alive(i, j):
+    current_position = initial_position()    
+    sum_ = sum_of(i,j)
+    if sum_< 2 or sum_ >3:
+        return 0
+    else:
+        return 1
+    
