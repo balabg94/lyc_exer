@@ -26,4 +26,7 @@ def test_sum_of_neighbors():
     
 
 def test_if_alive():
-    assert game_of_life.if_alive(3,3) == 0
+    assert game_of_life.if_alive(2,1) == 1
+
+def test_if_alive_sides():
+    assert game_of_life.if_alive_sides(3,3) == 0
