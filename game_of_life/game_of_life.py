@@ -25,8 +25,9 @@ def initial_position():
 def sum_of(i,j):
     current_position = initial_position()
     total = 0
+    N = len(current_position)
     #return current_position[i][j]
-    total = current_position[i-1][j-1] + current_position[i-1][j] + current_position[i-1][j+1] + current_position[i][j-1] +  current_position[i][j+1] + current_position[i+1][j-1] + current_position[i+1][j] + current_position[i+1][j+1]
+    total = current_position[(i-1)%N][(j-1)%N] + current_position[(i-1)%N][j] + current_position[(i-1)%N][(j+1)%N] + current_position[i][j-1] +  current_position[i][(j+1)%N] + current_position[(i+1)%N][(j-1)%N] + current_position[(i+1)%N][j] + current_position[(i+1)%N][(j+1)%N]
     return total
 
 def if_alive(i, j):
@@ -36,4 +37,4 @@ def if_alive(i, j):
         return 0
     else:
         return 1
-    
+
