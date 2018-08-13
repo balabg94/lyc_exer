@@ -22,27 +22,35 @@ def initial_position():
     return pos
 
     
-def sum_of(i,j):
-    current_position = initial_position()
+def sum_of(i,j, new_position):
+    #new_position = initial_position()
     total = 0
-    N = len(current_position)
-    #return current_position[i][j]
-    total = current_position[(i-1)%N][(j-1)%N] + current_position[(i-1)%N][j] + current_position[(i-1)%N][(j+1)%N] + current_position[i][j-1] +  current_position[i][(j+1)%N] + current_position[(i+1)%N][(j-1)%N] + current_position[(i+1)%N][j] + current_position[(i+1)%N][(j+1)%N]
+    N = len(new_position)
+    #return new_position[i][j]
+    total = new_position[(i-1)%N][(j-1)%N] + new_position[(i-1)%N][j] + new_position[(i-1)%N][(j+1)%N] + new_position[i][j-1] +  new_position[i][(j+1)%N] + new_position[(i+1)%N][(j-1)%N] + new_position[(i+1)%N][j] + new_position[(i+1)%N][(j+1)%N]
     return total
 
-def if_alive(i, j):
-    current_position = initial_position()    
-    sum_ = sum_of(i,j)
+def if_alive(i, j, new_position):
+    #new_position = initial_position()    
+    sum_ = sum_of(i,j, new_position)
     if sum_< 2 or sum_ >3:
-        return 0
+        new_position[i][j] = 0
+        return new_position
     else:
-        return 1
+        new_position[i][j] = 1
+        return new_position
 
-def if_dead(i, j):
-    current_position = initial_position()    
-    sum_ = sum_of(i,j)
+def if_dead(i, j, new_position):
+    #new_position = initial_position()    
+    sum_ = sum_of(i,j, new_position)
     if sum_ == 3:
-        return 1
+        new_position[i][j] = 1
+        return new_position
     else:
-        return 0
+        new_position[i][j] = 0
+        return new_position
 
+# def main():
+#     new_position = initial_position()
+#     while True:
+        

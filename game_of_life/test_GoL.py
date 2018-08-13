@@ -21,23 +21,67 @@ def test_cell_position():
 
 
 def test_sum_of_neighbors():
-
-    assert game_of_life.sum_of(2, 1) == 2
+    initial_positions = [[0, 0, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0]]
+    assert game_of_life.sum_of(2, 1, initial_positions) == 2
     
 
-def test_if_alive():
-    assert game_of_life.if_alive(2,1) == 1
 
+    
+def test_if_alive():
+    initial_positions = [[0, 0, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0]]
+    assert game_of_life.if_alive(2, 1, initial_positions) == [[0, 0, 0, 0],
+                                                              [0, 1, 0, 0],
+                                                              [0, 1, 0, 0],
+                                                              [0, 1, 0, 0]]
+    
+    
 def test_if_alive_sides():
-    assert game_of_life.if_alive(3,3) == 0
+    initial_positions = [[0, 0, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0]]
+    assert game_of_life.if_alive(3, 3, initial_positions) == [[0, 0, 0, 0],
+                                                              [0, 1, 0, 0],
+                                                              [0, 1, 0, 0],
+                                                              [0, 1, 0, 0]]
+    
 
 def test_if_alive_left_mid():
-    assert game_of_life.if_alive(2,0) == 1
+    initial_positions = [[0, 0, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0]]
+    assert game_of_life.if_alive(2, 0, initial_positions) == [[0, 0, 0, 0],
+                                                              [0, 1, 0, 0],
+                                                              [1, 1, 0, 0],
+                                                              [0, 1, 0, 0]]
+    
 
 def test_if_alive_right_mid():
-    assert game_of_life.if_alive(2,3) == 0
+    initial_positions = [[0, 0, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0]]
+    assert game_of_life.if_alive(2, 3, initial_positions) == [[0, 0, 0, 0],
+                                                              [0, 1, 0, 0],
+                                                              [0, 1, 0, 0],
+                                                              [0, 1, 0, 0]]
+    
 
 
 def test_if_dead():
-    assert game_of_life.if_dead(2,0) == 1
-
+    initial_positions = [[0, 0, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0],
+                         [0, 1, 0, 0]]
+    assert game_of_life.if_alive(2, 0, initial_positions) == [[0, 0, 0, 0],
+                                                              [0, 1, 0, 0],
+                                                              [1, 1, 0, 0],
+                                                              [0, 1, 0, 0]]
+    
