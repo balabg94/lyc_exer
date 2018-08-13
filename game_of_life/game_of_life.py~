@@ -1,0 +1,7 @@
+def grid(n):
+    #size = int(input('enter the req grid size'))
+    row = '-+'*n
+    column = []
+    column.append(list(row)*n)
+    return column
+    
