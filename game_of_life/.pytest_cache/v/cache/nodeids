@@ -1,3 +1,4 @@
 [
-  "test_GoL.py::test_return"
+  "test_GoL.py::test_return",
+  "test_GoL.py::test_cell_position"
 ]
