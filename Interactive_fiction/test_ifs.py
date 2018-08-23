@@ -8,4 +8,4 @@ def test_map():
 def test_if_firstroom():
     #to test if the first room is loaded.
 
-    assert engine.zeroth_room() == "You are standing at the end of a corridor. There is a door in front of you."
+    assert engine.zeroth_room("./maps.json") == "You are standing at the end of a corridor. There is a door in front of you."
