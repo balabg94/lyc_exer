@@ -1,7 +1,7 @@
 import json
 
-dictio = {'0': ['You are standing at the end of a corridor. There is a door in front of you.', '0','1', '0', '0'],
-          '1': ['You are standing in what seems to be a living room.', '1', '0', '1', '0']
+dictio = {'0': ['You are standing at the end of a corridor. There is a door in front of you.', ['S',1]],
+          '1': ['You are standing in what seems to be a living room.', ['E','2'],['N','0']]
 }
 dumped_dictio = json.dumps(dictio)
 loaded_dictio = json.loads(dumped_dictio)
