@@ -20,3 +20,17 @@ def get_exits(current_room):
     data = wrapper.readline()
     loaded_map = json.loads(data)
     return loaded_map[current_room][1:]
+
+def if_exit(current_room, out_path):
+    wrapper = open("./maps.json","r")
+    data = wrapper.readline()
+    loaded_map = json.loads(data)
+    out = 0
+    for i in range(1, len(loaded_map)):
+        if out_path in loaded_map[current_room][i]:
+            out = 1
+        else:
+            return "No exit that way"
+
+def main():
+    current_room = 0

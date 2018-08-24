@@ -17,4 +17,4 @@ def test_get_exits():
 
 def test_no_exit():
     # to test the output in case of no exit
-    assert engine.if_exit("N") == "No exit that way"
+    assert engine.if_exit("0", "N") == "No exit that way"
