@@ -13,4 +13,4 @@ def test_if_firstroom():
 def test_get_exits():
     #to test if exists from current room are available
     current_room = "0"
-    assert engine.get_exits(current_room) == ['S', 1]
+    assert engine.get_exits(current_room) == [['S', 1]]
