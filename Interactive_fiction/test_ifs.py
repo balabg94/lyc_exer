@@ -9,3 +9,8 @@ def test_if_firstroom():
     #to test if the first room is loaded.
 
     assert engine.zeroth_room("./maps.json") == "You are standing at the end of a corridor. There is a door in front of you."
+
+def test_get_exits():
+    #to test if exists from current room are available
+    current_room = "0"
+    assert engine.get_exits(current_room) == ['S', 1]
