@@ -29,7 +29,7 @@ def if_exit(current_room, out_path):
     for i in range(1, len(loaded_map)):
         if out_path in loaded_map[current_room][i]:
             current_room = loaded_map[current_room][i][1]
-            return loaded_map[current_room][0]
+            return loaded_map[current_room][0], current_room
         else:
             return "No exit that way"
 

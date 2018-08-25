@@ -21,4 +21,4 @@ def test_wrong_exit():
 
 def test_correct_exit():
     # to test in case of correct exit
-    assert engine.if_exit("0", "S") == 'You are standing in what seems to be a living room.'
+    assert engine.if_exit("0", "S") == ('You are standing in what seems to be a living room.', '1')
