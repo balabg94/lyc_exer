@@ -1,6 +1,7 @@
 #import pytest
 import sys
 import json
+#current_room = "0"
 
 def open_map(maps):
     maps = open(maps)
@@ -26,12 +27,35 @@ def if_exit(current_room, out_path):
     data = wrapper.readline()
     loaded_map = json.loads(data)
     out = 0
-    for i in range(1, len(loaded_map)):
-        if out_path in loaded_map[current_room][i]:
+    out_str = "No exit that way"
+    for i in range(1, len(loaded_map[current_room])):
+        #print(current_room)
+        if out_path not in loaded_map[current_room][i]:
+            #print(len(loaded_map[current_room]))
+            #print(loaded_map[current_room][i])
+            #return out_str
+            out = 0
+        #continue
+        elif out_path in loaded_map[current_room][i]:
+            #print(out_path)
             current_room = loaded_map[current_room][i][1]
-            return loaded_map[current_room][0], current_room
+            out = 1
+            #break
         else:
-            return "No exit that way"
-
+            return "ERROR"
+    if out == 0:
+        return out_str, current_room
+    elif out == 1:
+       # return loaded_map[current_room][i][1]
+        return loaded_map[current_room][0], current_room
+           
 def main():
-    current_room = 0
+    print(zeroth_room("./maps.json"))
+    current_room ="0"
+    while True:
+        #print("This is", current_room)
+        direction = input("Enter direction: ")
+        #print(if_exit(current_room, direction))
+        a, current_room = if_exit(current_room, direction)
+        #print(current_room)
+        print(a)

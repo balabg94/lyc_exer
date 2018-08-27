@@ -17,8 +17,8 @@ def test_get_exits():
 
 def test_wrong_exit():
     # to test the output in case of no exit
-    assert engine.if_exit("0", "N") == "No exit that way"
+    assert engine.if_exit("0", "N") == ("No exit that way", "0")
 
 def test_correct_exit():
     # to test in case of correct exit
-    assert engine.if_exit("0", "S") == ('You are standing in what seems to be a living room.', '1')
+    assert engine.if_exit("1", "N") == ("You are standing at the end of a corridor. There is a door in front of you.", '0')
