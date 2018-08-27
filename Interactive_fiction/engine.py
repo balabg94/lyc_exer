@@ -26,6 +26,7 @@ def if_exit(current_room, out_path):
     wrapper = open("./maps.json","r")
     data = wrapper.readline()
     loaded_map = json.loads(data)
+    #print(loaded_map)
     out = 0
     out_str = "No exit that way"
     for i in range(1, len(loaded_map[current_room])):
@@ -37,10 +38,10 @@ def if_exit(current_room, out_path):
             out = 0
         #continue
         elif out_path in loaded_map[current_room][i]:
-            #print(out_path)
+            #print(loaded_map[current_room][i][1])
             current_room = loaded_map[current_room][i][1]
             out = 1
-            #break
+            break
         else:
             return "ERROR"
     if out == 0:
@@ -53,7 +54,7 @@ def main():
     print(zeroth_room("./maps.json"))
     current_room ="0"
     while True:
-        #print("This is", current_room)
+        # print("This is", current_room)
         direction = input("Enter direction: ")
         #print(if_exit(current_room, direction))
         a, current_room = if_exit(current_room, direction)
