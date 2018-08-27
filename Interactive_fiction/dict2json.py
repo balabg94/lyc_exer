@@ -13,8 +13,17 @@ dictio = {'0': ['You are standing at the end of a corridor. There is a door in f
           '5': ['You are standing in the balcony attached to the hallway.', ['W', '2']],
 
           '6': ['You are standing in a connecting hallway. Three doors await you.', ['N', '2'],
-                ['S', '9'], ['E', '7'], ['W', '8']]
+                ['S', '9'], ['E', '7'], ['W', '8']],
 
+          '7': ['You are standing in a kitchen. Utensils everywhere.', ['W', '6']],
+
+          '8': ['You are standing in another bedroom. You can see a door that seems to lead to a balcony number 2.', ['E', '6'], ['S', '10']],
+
+          '9': ['You are standing in another bedroom. You can see a door that seems to lead to a balcony number 3.', ['N', '6'], ['S', '11']],
+
+          '10': ['You are standing in the balcony of room number 8.', ['N', '8']],
+
+          '11': ['You are standing in the balcony of room number 9.', ['N', '9']]
 
 }
 dumped_dictio = json.dumps(dictio)
