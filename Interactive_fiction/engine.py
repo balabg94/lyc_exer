@@ -1,7 +1,7 @@
-#import pytest
 import sys
 import json
-#current_room = "0"
+
+
 
 def open_map(maps):
     maps = open(maps)
@@ -29,17 +29,19 @@ def if_exit(current_room, out_path):
     #print(loaded_map)
     out = 0
     out_str = "No exit that way"
-    for i in range(1, len(loaded_map[current_room])):
+
+    for i in loaded_map[current_room]:
+
         #print(current_room)
-        if out_path not in loaded_map[current_room][i]:
+
+        if out_path not in i:
             #print(len(loaded_map[current_room]))
             #print(loaded_map[current_room][i])
-            #return out_str
             out = 0
-        #continue
-        elif out_path in loaded_map[current_room][i]:
+            
+        elif out_path in i:
             #print(loaded_map[current_room][i][1])
-            current_room = loaded_map[current_room][i][1]
+            current_room = i[1]
             out = 1
             break
         else:
