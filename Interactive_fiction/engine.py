@@ -25,14 +25,10 @@ def if_exit(current_room, out_path):
     wrapper = open("./maps.json","r")
     data = wrapper.readline()
     loaded_map = json.loads(data)
-    #print(loaded_map)
     out = 0
     out_str = "No exit that way"
 
     for i in loaded_map[current_room][1:]:
-
-        #print(current_room)
-
         if out_path not in i:
             #print(len(loaded_map[current_room]))
             #print(loaded_map[current_room][i])

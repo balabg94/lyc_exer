@@ -13,7 +13,7 @@ dictio = {'0': ['You are standing at the end of a corridor. There is a door in f
           '5': ['You are standing in the balcony attached to the hallway.', ['W', '2']],
 
           '6': ['You are standing in a connecting hallway. Three doors await you.', ['N', '2'],
-                ['S', '9'], ['E', '7'], ['W', '8']],
+                ['S', '9'], ['E', '7'], ['W', '8']],1
 
           '7': ['You are standing in a kitchen. Utensils everywhere.', ['W', '6']],
 
@@ -28,14 +28,6 @@ dictio = {'0': ['You are standing at the end of a corridor. There is a door in f
 }
 dumped_dictio = json.dumps(dictio)
 loaded_dictio = json.loads(dumped_dictio)
-
-# print (loaded_dictio['0'][0])
-
-# json_file = open("maps.json", "w")
-
-# json_file.write(loaded_dictio)
-
-# json_file.close()
 
 with open('maps.json', 'w') as outfile:
     json.dump(loaded_dictio, outfile)
