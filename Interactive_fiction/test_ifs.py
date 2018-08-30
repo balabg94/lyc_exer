@@ -1,6 +1,7 @@
 import pytest
 import engine
 
+
 def test_map():
     #to test if a json file is loaded.
     assert engine.open_map("./maps.json") == True
@@ -21,4 +22,6 @@ def test_wrong_exit():
 
 def test_correct_exit():
     # to test in case of correct exit
-    assert engine.if_exit("1", "N") == ("You are standing at the end of a corridor. There is a door in front of you.", '0')
+    assert engine.if_exit("0", "S") == ("You are standing in what seems to be a living room.", '1')
+
+
