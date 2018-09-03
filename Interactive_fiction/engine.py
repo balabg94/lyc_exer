@@ -47,15 +47,19 @@ def if_exit(current_room, out_path):
         return loaded_map[current_room][0], current_room
            
 def main():
+    print("The directions are N, S, E and W for North South East and West respectively.\n")
     print(zeroth_room("./maps.json"))
     current_room ="0"
     while True:
         # print("This is", current_room)
         direction = input("Enter direction: ")
         #print(if_exit(current_room, direction))
-        a, current_room = if_exit(current_room, direction)
-        #print(current_room)
-        print(a)
+        if direction in ["N", "S", "E", "W"]:
+            description, current_room = if_exit(current_room, direction)
+            #print(current_room)
+            print(description)
+        else:
+            print("\nInvalid direction. Please enter a valid direction.\n")
 
 
 if __name__ == "__main__":
